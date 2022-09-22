@@ -1,0 +1,113 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+.time-incident {
+	width: 100px;
+}
+.icb-location-container {
+	overflow-x: scroll;
+	padding: 0.8em;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.icb-row {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 0px 10px;
+	/* justify-content: ; */
+}
+
+.icb-row:nth-child(even) {
+	background: #f8f8f8;
+}
+
+.icb-row-header {
+	border-bottom: 1px solid #C7C7C7;
+	font-size: 0.88em;
+	font-weight: bold;
+}
+
+.icb-naam {
+	flex: 0 0 100px
+}
+
+.icb-rol {
+	flex: 0 0 10px
+}
+
+.icb-vantot {
+	flex: 0 0 130px;
+  display: flex;
+	flex-flow: column;
+	text-align: center;
+	height: 2.8em;
+}
+
+.icb-comp {
+  flex: 0 0 130px;
+	/* text-overflow: clip; */
+	min-width: 0;
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icb-voertuig {
+	flex: 0 0 130px
+}
+
+.icb-kenteken {
+	flex: 0 0 80px
+}
+
+.grid {
+  display: grid;
+	grid-template-columns: 3fr 1fr 5fr 5fr 2fr 2fr;
+	grid-gap: 0px 0px;
+}
+
+.grid > div:nth-child(12n + 7),
+.grid > div:nth-child(12n + 8),
+.grid > div:nth-child(12n + 9),
+.grid > div:nth-child(12n + 10),
+.grid > div:nth-child(12n + 11),
+.grid > div:nth-child(12n + 12) {
+  background:rgba(0,0,0,0.1);
+}
+.grid > div:nth-child(6n) {
+  padding: 0px;
+}
+.icb-header-item {
+	font-weight: bold;
+	padding-right: 5px;
+}
+.icb-item {
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	padding-right: 5px;
+}
+
+span.emoji {
+  font-size: larger;
+}
+/* Tooltip text */
+.icb-tooltip {
+	visibility: hidden;
+	width: auto;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	white-space: pre-wrap;
+	max-width: 150px;
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+}
