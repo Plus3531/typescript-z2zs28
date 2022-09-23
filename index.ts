@@ -188,7 +188,13 @@ grid.addEventListener(
 );
 
 const icbGrid = document.getElementById('icb-grid');
-
+icbGrid.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    if(document.activeElement === event.target) {
+      console.log('ja focus')
+    }
+  }
+});
 const addHeader = (element) => {
   const grid = document.createElement('div');
   grid.setAttribute('id', 'int-grid');
@@ -209,6 +215,7 @@ const gridContainer = addHeader(icbGrid);
 const addContent = () => {
   const icbGrid = document.getElementById('int-grid');
   const item = document.createElement('div');
+  item.setAttribute('tabindex', '0');
   item.textContent = 'hello';
   item.classList.add('icb-item');
   icbGrid.appendChild(item);
@@ -226,8 +233,9 @@ const addKern = () => {
 const addToKern = (myFragment) => {
   const kern = myFragment.getElementById(kernId);
   const q = document.createElement('div');
+  q.setAttribute('tabindex', '0');
   q.textContent = 'queen';
-  kern.appendChild(q);
+  icbGrid.append(q);
 };
 const myFragment = addKern();
 addToKern(myFragment);
